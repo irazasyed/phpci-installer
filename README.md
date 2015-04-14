@@ -6,11 +6,11 @@ PHPCI Installer
 
 
 > [PHPCI][1] Installer for Laravel Homestead.
-> Simple shell script that automatically installs the [PHPCI][1] with no user interaction required on a Laravel Homestead box. Easy to get started quickly!
+> Simple shell script that automatically installs the [PHPCI][1] with no user interaction required on a Laravel Homestead box.
 
-## Prerequisite
+## Pre-Requisites
 
-- [Laravel Homestead][2]
+- [Laravel Homestead][2] configured and running.
 
 ### Important!
 
@@ -36,6 +36,8 @@ The script drops the `phpci` database if it already exists and creates a new one
 ## Additional information
 
 Any issues, please [report here](https://github.com/irazasyed/phpci-installer/issues)
+
+Inspired to create this script by this [tutorial](https://medium.com/@genealabs/how-to-install-phpci-in-homestead-5ee0b022e8be) by [Mike Bronner](https://medium.com/@genealabs)
 
 ## Contributions
 
