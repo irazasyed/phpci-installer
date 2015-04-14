@@ -42,9 +42,9 @@ function coloredEcho(){
     tput sgr0;
 }
 
-coloredEcho "**************************************" green
-coloredEcho " Welcome to Homestead PHPCI Installer" green
-coloredEcho "**************************************" green
+coloredEcho "****************************" green
+coloredEcho " Welcome to PHPCI Installer" green
+coloredEcho "****************************" green
 
 # Download PHPCI & Run Composer Install
 coloredEcho "Downloading and Installing PHPCI Dependencies." green
