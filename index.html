@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Phpci-installer by irazasyed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Phpci-installer</h1>
+      <h2 class="project-tagline">PHPCI Easy Installer for Laravel Homestead</h2>
+      <a href="https://github.com/irazasyed/phpci-installer" class="btn">View on GitHub</a>
+      <a href="https://github.com/irazasyed/phpci-installer/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/irazasyed/phpci-installer/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="phpci-installer" class="anchor" href="#phpci-installer" aria-hidden="true"><span class="octicon octicon-link"></span></a>PHPCI Installer</h1>
+
+<p><a href="https://github.com/irazasyed/phpci-installer/releases"><img src="https://img.shields.io/github/release/irazasyed/phpci-installer.svg?style=flat-square" alt="Latest Version"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></a></p>
+
+<blockquote>
+<p><a href="https://www.phptesting.org/">PHPCI</a> Installer for Laravel Homestead.
+Simple shell script that automatically installs the <a href="https://www.phptesting.org/">PHPCI</a> with no user interaction required on a Laravel Homestead box.</p>
+</blockquote>
+
+<h2>
+<a id="pre-requisites" class="anchor" href="#pre-requisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pre-Requisites</h2>
+
+<ul>
+<li>
+<a href="http://laravel.com/docs/homestead">Laravel Homestead</a> configured and running.</li>
+</ul>
+
+<h3>
+<a id="important" class="anchor" href="#important" aria-hidden="true"><span class="octicon octicon-link"></span></a>Important!</h3>
+
+<p>The script drops the <code>phpci</code> database if it already exists and creates a new one. So if you already have a database with such name, make sure to either rename it or change the database name by forking this repo before installation.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<ol>
+<li>SSH into your Laravel Homestead Box (<code>homestead ssh</code>) and <code>cd</code> into Code/Projects Directory.</li>
+<li>
+<code>$ curl -sSL http://lk.gd/phpci-install | bash -s username password email</code> where <code>username</code>, <code>password</code> and <code>email</code> is the admin's info. Ex: <code>homestead secret homestead@domain.com</code>.</li>
+<li> Open the <code>/etc/hosts</code> file on your main machine and add <code>192.168.10.10 phpci.app</code> where <code>192.168.10.10</code> is the default IP of your homestead box.</li>
+<li>Go to <a href="http://phpci.app">http://phpci.app</a> and Login into the panel using the email and password provided in step 2.</li>
+<li>(Optional) You can follow the <a href="https://github.com/Block8/PHPCI/wiki">PHPCI wiki</a> for other configurations.</li>
+</ol>
+
+<h2>
+<a id="default-config" class="anchor" href="#default-config" aria-hidden="true"><span class="octicon octicon-link"></span></a>Default Config</h2>
+
+<ol>
+<li>Default directory - <code>phpci</code>
+</li>
+<li>Default domain - <code>phpci.app</code>
+</li>
+<li>Database - Creates <code>phpci</code> database and uses <code>homestead</code> user with default password.</li>
+</ol>
+
+<blockquote>
+<p><strong>Note:</strong> The script assumes the database username and password in your homestead box is the default and has not been changed.</p>
+</blockquote>
+
+<h2>
+<a id="additional-information" class="anchor" href="#additional-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>Additional information</h2>
+
+<p>Any issues, please <a href="https://github.com/irazasyed/phpci-installer/issues">report here</a></p>
+
+<p>Inspired to create this script by this <a href="https://medium.com/@genealabs/how-to-install-phpci-in-homestead-5ee0b022e8be">tutorial</a> by <a href="https://medium.com/@genealabs">Mike Bronner</a></p>
+
+<h2>
+<a id="contributions" class="anchor" href="#contributions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributions</h2>
+
+<p>Contributions are welcome, Please create a PR.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="LICENSE">MIT</a> © <a href="http://lk.gd/irazasyed">Syed Irfaq R.</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/irazasyed/phpci-installer">Phpci-installer</a> is maintained by <a href="https://github.com/irazasyed">irazasyed</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
