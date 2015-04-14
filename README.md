@@ -21,7 +21,7 @@ The script drops the `phpci` database if it already exists and creates a new one
 1. SSH into your Laravel Homestead Box (`homestead ssh`) and `cd` into Code/Projects Directory.
 2. `$ curl -sSL http://lk.gd/phpci-install | bash -s username password email` where `username`, `password` and `email` is the admin's info. Ex: `homestead secret homestead@domain.com`.
 3.  Open the `/etc/hosts` file on your main machine and add `192.168.10.10 phpci.app` where `192.168.10.10` is the default IP of your homestead box.
-4. Go to [http://phpci.app](http://phpci.app)
+4. Go to [http://phpci.app](http://phpci.app) and Login into the panel using the email and password provided in step 2.
 5. (Optional) You can follow the [PHPCI wiki](https://github.com/Block8/PHPCI/wiki) for other configurations.
 
 ## Default Config
