@@ -57,7 +57,7 @@ EOF
 
 # Run PHPCI Install
 coloredEcho "Starting PHPCI Console Install." 2
-php ./console phpci:install --url=http://$DEFAULT_DOMAIN --db-host=$DB_HOST --db-name=$DB_NAME --db-user=$DB_USER --db-pass=$DB_PASSWORD
+php ./console phpci:install --url=http://$DEFAULT_DOMAIN --db-host=$DB_HOST --db-name=$DB_NAME --db-user=$DB_USER --db-pass=$DB_PASSWORD --admin-name=$1 --admin-pass=$2 --admin-mail=$3
 
 # Setup Cron
 coloredEcho "Setting up Cron Job!" 2
