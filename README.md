@@ -6,7 +6,7 @@ PHPCI Installer
 
 
 > [PHPCI][1] Installer for Laravel Homestead.
-> Simple shell script that automatically installs the [PHPCI][1] with minimal user interaction on a Laravel Homestead box. Easy to get started quickly!
+> Simple shell script that automatically installs the [PHPCI][1] with no user interaction required on a Laravel Homestead box. Easy to get started quickly!
 
 ## Prerequisite
 
@@ -19,7 +19,7 @@ The script drops the `phpci` database if it already exists and creates a new one
 ## Installation
 
 1. SSH into your Laravel Homestead Box (`homestead ssh`) and `cd` into Code/Projects Directory.
-2. `$ curl -sSL http://lk.gd/phpci-install | bash` Follow the on-screen instructions.
+2. `$ curl -sSL http://lk.gd/phpci-install | bash -s username password email` where `username`, `password` and `email` is the admin's info. Ex: `homestead secret homestead@domain.com`.
 3.  Open the `/etc/hosts` file on your main machine and add `192.168.10.10 phpci.app` where `192.168.10.10` is the default IP of your homestead box.
 4. Go to [http://phpci.app](http://phpci.app)
 5. (Optional) You can follow the [PHPCI wiki](https://github.com/Block8/PHPCI/wiki) for other configurations.
