@@ -16,9 +16,9 @@ The script drops the `phpci` database if it already exists and creates a new one
 
 ## Installation
 
-1) SSH into your Laravel Homestead Box (`homestead ssh`) and `cd` into Code/Projects Directory.
+**1.** SSH into your Laravel Homestead Box (`homestead ssh`) and `cd` into Code/Projects Directory.
 
-2) If you're fine with the default config and don't want to make any changes, Just fire the following command & jump to step 3:
+**2.** If you're fine with the default config and don't want to make any changes, Just fire the following command & jump to step 3:
 
 ```
 $ curl -sSL http://lk.gd/phpci-install | bash
@@ -38,11 +38,11 @@ All the above arguments are optional, you can set all or the each of the ones yo
 $ curl -sSL http://lk.gd/phpci-install | bash -s phpci.vm phpci@homestead.vm 123456 phpci
 ```
 
-3)  Open the `/etc/hosts` file on your main machine and add `192.168.10.10 phpci.app` where `192.168.10.10` is the default IP of your homestead box and `phpci.app` is the default domain to access PHPCI or the one you passed in step 2 otherwise.
+**3.**  Open the `/etc/hosts` file on your main machine and add `192.168.10.10 phpci.app` where `192.168.10.10` is the default IP of your homestead box and `phpci.app` is the default domain to access PHPCI or the one you passed in step 2 otherwise.
 
-4) Go to [http://phpci.app](http://phpci.app) and Login into the panel using the login credentials shown at the end of the installation or the default.
+**4.** Go to [http://phpci.app](http://phpci.app) and Login into the panel using the login credentials shown at the end of the installation or the default.
 
-5) (Optional) You can follow the [PHPCI wiki](https://github.com/Block8/PHPCI/wiki) for other configurations.
+**5.** **(Optional)** You can follow the [PHPCI wiki](https://github.com/Block8/PHPCI/wiki) for other configurations.
 
 ## Default Config
 
