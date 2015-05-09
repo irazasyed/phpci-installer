@@ -22,8 +22,7 @@
       <h1>
 <a id="phpci-installer" class="anchor" href="#phpci-installer" aria-hidden="true"><span class="octicon octicon-link"></span></a>PHPCI Installer</h1>
 
-<p><a href="https://github.com/irazasyed/phpci-installer/releases"><img src="https://img.shields.io/github/release/irazasyed/phpci-installer.svg?style=flat-square" alt="Latest Version"></a>
-<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></a></p>
+<p><a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></a></p>
 
 <blockquote>
 <p><a href="https://www.phptesting.org/">PHPCI</a> Installer for Laravel Homestead.
@@ -46,14 +45,30 @@ Simple shell script that automatically installs the <a href="https://www.phptest
 <h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<ol>
-<li>SSH into your Laravel Homestead Box (<code>homestead ssh</code>) and <code>cd</code> into Code/Projects Directory.</li>
-<li>
-<code>$ curl -sSL http://lk.gd/phpci-install | bash -s username password email</code> where <code>username</code>, <code>password</code> and <code>email</code> is the admin's info. Ex: <code>homestead secret homestead@domain.com</code>.</li>
-<li> Open the <code>/etc/hosts</code> file on your main machine and add <code>192.168.10.10 phpci.app</code> where <code>192.168.10.10</code> is the default IP of your homestead box.</li>
-<li>Go to <a href="http://phpci.app">http://phpci.app</a> and Login into the panel using the email and password provided in step 2.</li>
-<li>(Optional) You can follow the <a href="https://github.com/Block8/PHPCI/wiki">PHPCI wiki</a> for other configurations.</li>
-</ol>
+<p><strong>1.</strong> SSH into your Laravel Homestead Box (<code>homestead ssh</code>) and <code>cd</code> into Code/Projects Directory.</p>
+
+<p><strong>2.</strong> If you're fine with the default config and don't want to make any changes, Just fire the following command &amp; jump to step 3:</p>
+
+<pre><code>$ curl -sSL http://lk.gd/phpci-install | bash
+</code></pre>
+
+<p><strong>(Optional) Custom Config:</strong> If you'd like to use custom config, pass the following arguments with appropriate values:</p>
+
+<pre><code>-s &lt;domain&gt; &lt;admin_email&gt; &lt;admin_password&gt; &lt;custom_phpci_dirname&gt;
+</code></pre>
+
+<p>All the above arguments are optional, you can set all or the each of the ones you want in same order.</p>
+
+<p><strong>Example</strong>:</p>
+
+<pre><code>$ curl -sSL http://lk.gd/phpci-install | bash -s phpci.vm phpci@homestead.vm 123456 phpci
+</code></pre>
+
+<p><strong>3.</strong>  Open the <code>/etc/hosts</code> file on your main machine and add <code>192.168.10.10 phpci.app</code> where <code>192.168.10.10</code> is the default IP of your homestead box and <code>phpci.app</code> is the default domain to access PHPCI or the one you passed in step 2 otherwise.</p>
+
+<p><strong>4.</strong> Go to <a href="http://phpci.app">http://phpci.app</a> and Login into the panel using the login credentials shown at the end of the installation or the default.</p>
+
+<p><strong>5.</strong> <strong>(Optional)</strong> You can follow the <a href="https://github.com/Block8/PHPCI/wiki">PHPCI wiki</a> for other configurations.</p>
 
 <h2>
 <a id="default-config" class="anchor" href="#default-config" aria-hidden="true"><span class="octicon octicon-link"></span></a>Default Config</h2>
@@ -64,10 +79,14 @@ Simple shell script that automatically installs the <a href="https://www.phptest
 <li>Default domain - <code>phpci.app</code>
 </li>
 <li>Database - Creates <code>phpci</code> database and uses <code>homestead</code> user with default password.</li>
+<li>Admin Email: <code>phpci@homestead.vm</code>
+</li>
+<li>Admin Password: <code>secret</code>
+</li>
 </ol>
 
 <blockquote>
-<p><strong>Note:</strong> The script assumes the database username and password in your homestead box is the default and has not been changed.</p>
+<p><strong>Note:</strong> The script uses the standard homestead <code>create-mysql.sh</code> script to create the database.</p>
 </blockquote>
 
 <h2>
