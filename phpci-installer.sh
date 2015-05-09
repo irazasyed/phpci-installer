@@ -60,10 +60,9 @@ cd $DEFAULT_PATH && composer du -o
 info "Increasing PHP Memory Limit."
 sudo sed -i "s/memory_limit = .*/memory_limit = 1024M/" /etc/php5/cli/php.ini
 
-# Setup Database
+# Setup Database - Uses Homestead's standard create MySQL script.
 info "Setting up MySQL Database."
-mysql -u$DB_USER -p$DB_PASSWORD -e "DROP DATABASE IF EXISTS \`${DB_NAME}\`; CREATE DATABASE \`${DB_NAME}\` DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_unicode_ci";
-sudo service mysql restart
+sudo bash /vagrant/scripts/create-mysql.sh $DB_NAME
 
 info "Adding MySQL Config."
 touch $MYSQL_CONF
