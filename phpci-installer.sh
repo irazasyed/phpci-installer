@@ -7,17 +7,28 @@
 # Project URL:  https://github.com/irazasyed/phpci-installer
 #
 
-
-# Default Config
+##################
+# Default Config #
+##################
 DEFAULT_DOMAIN=phpci.app
 DEFAULT_DIRNAME=phpci
-
-DB_HOST=localhost
 DB_NAME=phpci
-DB_USER=homestead
-DB_PASSWORD=secret
-
 MYSQL_CONF=~/.my.cnf
+
+##################
+# PHPCI Defaults #
+##################
+DEFAULT_URL=http://$DEFAULT_DOMAIN
+ADMIN_USERNAME=phpci
+ADMIN_PASSWORD=secret
+ADMIN_EMAIL=phpci@homestead.vm
+
+[[ "$1" ]] && DEFAULT_DOMAIN=$1
+[[ "$2" ]] && ADMIN_EMAIL=$2
+[[ "$3" ]] && ADMIN_PASSWORD=$3
+[[ "$4" ]] && DEFAULT_DIRNAME=$4
+
+DEFAULT_PATH=$PWD/$DEFAULT_DIRNAME
 
 #
 # Helper function to output in color
