@@ -1,7 +1,5 @@
 PHPCI Installer
 =========================
-
-[![Latest Version](https://img.shields.io/github/release/irazasyed/phpci-installer.svg?style=flat-square)](https://github.com/irazasyed/phpci-installer/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 
@@ -18,19 +16,43 @@ The script drops the `phpci` database if it already exists and creates a new one
 
 ## Installation
 
-1. SSH into your Laravel Homestead Box (`homestead ssh`) and `cd` into Code/Projects Directory.
-2. `$ curl -sSL http://lk.gd/phpci-install | bash -s username password email` where `username`, `password` and `email` is the admin's info. Ex: `homestead secret homestead@domain.com`.
-3.  Open the `/etc/hosts` file on your main machine and add `192.168.10.10 phpci.app` where `192.168.10.10` is the default IP of your homestead box.
-4. Go to [http://phpci.app](http://phpci.app) and Login into the panel using the email and password provided in step 2.
-5. (Optional) You can follow the [PHPCI wiki](https://github.com/Block8/PHPCI/wiki) for other configurations.
+1) SSH into your Laravel Homestead Box (`homestead ssh`) and `cd` into Code/Projects Directory.
+
+2) If you're fine with the default config and don't want to make any changes, Just fire the following command:
+
+```
+$ curl -sSL http://lk.gd/phpci-install | bash
+```
+
+**(Optional) Custom Config:** If you'd like to use custom config, pass the following arguments with appropriate values:
+
+```
+-s <domain> <admin_email> <admin_password> <custom_phpci_dirname>
+``` 
+
+All the above arguments are optional, you can set all or the each of the ones you want in same order.
+
+**Example**:
+
+```
+$ curl -sSL http://lk.gd/phpci-install | bash -s phpci.vm phpci@homestead.vm 123456 phpci
+```
+
+3)  Open the `/etc/hosts` file on your main machine and add `192.168.10.10 phpci.app` where `192.168.10.10` is the default IP of your homestead box and `phpci.app` is the default domain to access PHPCI or the one you passed in step 2 otherwise.
+
+4) Go to [http://phpci.app](http://phpci.app) and Login into the panel using the login credentials shown at the end of the installation or the default.
+
+5) (Optional) You can follow the [PHPCI wiki](https://github.com/Block8/PHPCI/wiki) for other configurations.
 
 ## Default Config
 
 1. Default directory - `phpci`
 2. Default domain - `phpci.app`
 3. Database - Creates `phpci` database and uses `homestead` user with default password.
+4. Admin Email: `phpci@homestead.vm`
+5. Admin Password: `secret`
 
-> **Note:** The script assumes the database username and password in your homestead box is the default and has not been changed.
+> **Note:** The script uses the standard homestead `create-mysql.sh` script to create the database.
 
 
 ## Additional information
