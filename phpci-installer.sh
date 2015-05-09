@@ -76,7 +76,7 @@ sudo service mysql restart
 
 # Run PHPCI Install
 info "Starting PHPCI Console Install."
-php ./console phpci:install --url=http://$DEFAULT_DOMAIN --db-host=$DB_HOST --db-name=$DB_NAME --db-user=$DB_USER --db-pass=$DB_PASSWORD --admin-name=$1 --admin-pass=$2 --admin-mail=$3
+php ./console phpci:install --url=$DEFAULT_URL --db-host=localhost --db-name=$DB_NAME --db-user=homestead --db-pass=secret --admin-name=homestead --admin-pass=$ADMIN_PASSWORD --admin-mail=$ADMIN_EMAIL
 
 # Setup Cron - Makes sure there is no cron job already set.
 info "Setting up Cron Job!"
