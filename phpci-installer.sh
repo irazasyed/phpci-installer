@@ -92,6 +92,9 @@ sudo bash /vagrant/scripts/serve.sh $DEFAULT_DOMAIN $(pwd)/public
 info "*********************"
 info "Install success."
 info "You can access it at:"
-note "http://${DEFAULT_DOMAIN}"
+note $DEFAULT_URL
+info "Login Credentials:"
+note "Email: ${ADMIN_EMAIL}"
+note "Password: ${ADMIN_PASSWORD}"
 info "*********************"
 info "Don't forget to add the domain to /etc/hosts file on your main machine!"
