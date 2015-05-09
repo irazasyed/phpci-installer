@@ -47,15 +47,14 @@ note() {
     coloredEcho "$1" 3;
 }
 
-
 info "****************************"
 info " Welcome to PHPCI Installer"
 info "****************************"
 
 # Download PHPCI & Run Composer Install
 info "Downloading and Installing PHPCI Dependencies."
-composer create-project block8/phpci $DEFAULT_DIRNAME --keep-vcs --no-dev --prefer-dist
-cd $DEFAULT_DIRNAME && composer install --no-dev --prefer-dist --optimize-autoloader
+composer create-project block8/phpci $DEFAULT_PATH --keep-vcs --no-dev --prefer-dist
+cd $DEFAULT_PATH && composer du -o
 
 # Increase PHP Memory Limit
 info "Increasing PHP Memory Limit."
