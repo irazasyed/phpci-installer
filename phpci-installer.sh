@@ -72,6 +72,7 @@ max_allowed_packet=64M
 innodb_log_file_size=512M
 innodb_log_buffer_size=768M
 EOF
+sudo service mysql restart
 
 # Run PHPCI Install
 info "Starting PHPCI Console Install."
