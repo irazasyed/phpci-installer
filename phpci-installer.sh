@@ -18,9 +18,8 @@ MYSQL_CONF=~/.my.cnf
 ##################
 # PHPCI Defaults #
 ##################
-ADMIN_USERNAME=phpci
-ADMIN_PASSWORD=secret
 ADMIN_EMAIL=phpci@homestead.vm
+ADMIN_PASSWORD=secret
 
 [[ "$1" ]] && DEFAULT_DOMAIN=$1
 [[ "$2" ]] && ADMIN_EMAIL=$2
