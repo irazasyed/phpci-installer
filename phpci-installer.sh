@@ -77,11 +77,12 @@ EOF
 info "Starting PHPCI Console Install."
 php ./console phpci:install --url=http://$DEFAULT_DOMAIN --db-host=$DB_HOST --db-name=$DB_NAME --db-user=$DB_USER --db-pass=$DB_PASSWORD --admin-name=$1 --admin-pass=$2 --admin-mail=$3
 
-# Setup Cron
+# Setup Cron - Makes sure there is no cron job already set.
 info "Setting up Cron Job!"
-croncmd="php $(pwd)/console phpci:run-builds"
+croncmd="php ${DEFAULT_PATH}/console phpci:run-builds"
 cronjob="* * * * * $croncmd"
 cat <(fgrep -i -v "${croncmd}" <(crontab -l)) <(echo "${cronjob}") | crontab -
+sudo service cron restart
 
 # Provision
 info "Provisioning PHPCI"
