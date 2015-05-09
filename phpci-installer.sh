@@ -18,7 +18,6 @@ MYSQL_CONF=~/.my.cnf
 ##################
 # PHPCI Defaults #
 ##################
-DEFAULT_URL=http://$DEFAULT_DOMAIN
 ADMIN_USERNAME=phpci
 ADMIN_PASSWORD=secret
 ADMIN_EMAIL=phpci@homestead.vm
@@ -28,6 +27,7 @@ ADMIN_EMAIL=phpci@homestead.vm
 [[ "$3" ]] && ADMIN_PASSWORD=$3
 [[ "$4" ]] && DEFAULT_DIRNAME=$4
 
+DEFAULT_URL=http://$DEFAULT_DOMAIN
 DEFAULT_PATH=$PWD/$DEFAULT_DIRNAME
 
 #
