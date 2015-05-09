@@ -18,7 +18,7 @@ The script drops the `phpci` database if it already exists and creates a new one
 
 1) SSH into your Laravel Homestead Box (`homestead ssh`) and `cd` into Code/Projects Directory.
 
-2) If you're fine with the default config and don't want to make any changes, Just fire the following command:
+2) If you're fine with the default config and don't want to make any changes, Just fire the following command & jump to step 3:
 
 ```
 $ curl -sSL http://lk.gd/phpci-install | bash
